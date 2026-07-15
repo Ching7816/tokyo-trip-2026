@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="https://img.icons8.com/fluent/512/tokyo-tower.png?v=2">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluent/512/tokyo-tower.png?v=2">
+    <title>Leslie & Ruby 東京之旅 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            letter-spacing: -0.011em;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 pb-24">
+
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 p-4 sticky top-0 z-50">
+        <div class="flex justify-between items-center max-w-md mx-auto">
+            <div>
+                <h1 class="text-lg font-black tracking-tight bg-gradient-to-r from-orange-600 via-rose-500 to-amber-500 bg-clip-text text-transparent">TOKYO • AUTUMN</h1>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Leslie & Ruby Special Edition</p>
+            </div>
+            <div class="bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-xs font-bold border border-rose-100 flex items-center space-x-1">
+                <span>🗼</span>
+                <span>10/01 - 10/06</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto p-4">
+
+        <div id="itinerary" class="page-content active space-y-6">
+            <div class="flex space-x-2 overflow-x-auto no-scrollbar pb-1 sticky top-[69px] bg-slate-50/95 backdrop-blur z-40 py-2 border-b border-slate-100/50">
+                <button onclick="showDay(1)" class="day-btn bg-rose-500 text-white px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 transition-all shadow-sm" id="btn-day1">D1 • 10.01</button>
+                <button onclick="showDay(2)" class="day-btn bg-white text-slate-500 px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 border border-slate-100 transition-all" id="btn-day2">D2 • 10.02</button>
+                <button onclick="showDay(3)" class="day-btn bg-white text-slate-500 px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 border border-slate-100 transition-all" id="btn-day3">D3 • 10.03</button>
+                <button onclick="showDay(4)" class="day-btn bg-white text-slate-500 px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 border border-slate-100 transition-all" id="btn-day4">D4 • 10.04</button>
+                <button onclick="showDay(5)" class="day-btn bg-white text-slate-500 px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 border border-slate-100 transition-all" id="btn-day5">D5 • 10.05</button>
+                <button onclick="showDay(6)" class="day-btn bg-white text-slate-500 px-4 py-2.5 rounded-2xl text-xs font-bold flex-shrink-0 border border-slate-100 transition-all" id="btn-day6">D6 • 10.06</button>
+            </div>
+
+            <div id="day1-content" class="day-section space-y-5">
+                <div class="bg-gradient-to-r from-rose-500 to-orange-500 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 1：東京初著陸 ➔ 上野・御徒町散策</h3>
+                    <p class="text-xs opacity-90 mt-1">漫步東京秋日午後，首嚐神級拉麵</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">06:45 - 11:15</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-plane mr-1 text-rose-500"></i>辦理登機</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">桃園機場 TPE ➔ 成田機場 NRT</h4>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-blue-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">12:45 - 13:45</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-blue-50 text-blue-600 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-train mr-1 text-blue-500"></i>京成電鐵 Skyliner (去程)</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">成田機場直達日暮里</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">抵達日暮里後轉乘 JR 山手線一站至「鶯谷站」寄存行李。</p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-amber-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">14:30 - 15:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-cookie-bite mr-1 text-amber-500"></i>Cafe 下午茶</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">EGG BABY CAFE</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">享用招牌半熟雞蛋沙拉吐司與超人氣硬布丁。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=EGG+BABY+CAFE" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-emerald-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">15:30 - 17:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bag-shopping mr-1 text-emerald-500"></i>大師戶外服飾</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">Mont-bell 御徒町店</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">逛逛全東京頂級旗艦店，狂掃高CP值服飾與單品。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=mont-bell+Okachimachi" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">19:00 - 20:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bowl-food mr-1 text-rose-500"></i>神級鴨拉麵</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">らーめん 鴨to葱</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">朝聖精緻無比的鴨骨與蔥水熬製的高湯拉麵（晚間時段避開上班族排隊）。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=鴨to葱" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day2-content" class="day-section hidden space-y-5">
+                <div class="bg-gradient-to-r from-orange-500 to-amber-500 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 2::上野金色古社 ➔ 皇居與秋葉原神級美食</h3>
+                    <p class="text-xs opacity-90 mt-1">走進幕府將軍殿堂，品嚐秋葉原最具代表性之天花板料理</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-amber-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">10:00 - 11:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-torii-gate mr-1 text-amber-500"></i>幕府史蹟</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">上野東照宮 參拜</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">隱身在上野恩賜公園內，參拜供奉德川家康的金色奢華宮殿。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=上野東照宮" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-orange-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">11:30 - 12:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-utensils mr-1 text-orange-500"></i>上野限定美味</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">午餐二選一排隊名店</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【選項A】とんかつ山家</strong>：極厚多汁的高 CP 炸豬排套餐！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>【選項B】肉的大山</strong>：買個爆汁和牛炸肉餅站在門口吃最對味！</p>
+                            <div class="flex space-x-3 pt-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=とんかつ山家+上野" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>山家炸豬排</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=肉の大山+上野" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>肉的大山</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">12:30 - 14:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-gamepad mr-1 text-rose-500"></i>動漫與童心</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">Yamashiroya 玩具旗艦店</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">整棟 6 層樓滿滿的動漫周邊、任天堂與吉伊卡哇，非常好挖寶。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Yamashiroya+Ueno" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-emerald-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">15:30 - 17:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-tree mr-1 text-emerald-500"></i>東京中心綠洲</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">皇居外苑 & 二重橋</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">在靜謐優雅的古典松樹步道與護城河旁散步，結束後直奔餐廳卡位避開人潮！</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=皇居二重橋" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-600 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-rose-500 block tracking-wider">17:00 - 18:30</span>
+                        <div class="bg-white p-4 rounded-2xl border-2 border-rose-100 shadow-md mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-100 text-rose-700 px-2.5 py-0.5 rounded-full font-extrabold"><i class="fa-solid fa-fire mr-1 text-rose-600"></i>秋葉原夢幻殿堂名店</span>
+                            </div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">🍁 晚餐：秋葉原最強天花板料理</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【丸五豬排 (Marugo)】</strong>：米其林推薦！低溫慢炸、香氣四溢、驚人多汁的頂級山形三元豚豬排！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>【炸牛排壹貳參】</strong>：Google 4.8分傳奇！外皮超香酥、肉質入口即化的地下一樓隱藏版石燒炸牛排！</p>
+                            <div class="flex space-x-3 pt-2 border-t border-slate-100 mt-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=とんかつ+丸五+秋葉原" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>丸五豬排導航</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=牛かつ壱弐参" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>炸牛壹貳參導航</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-violet-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">18:30 - 21:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-violet-50 text-violet-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bolt mr-1 text-violet-500"></i>吃飽輕鬆逛</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">秋葉原不夜城探索</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">吃飽喝足後，悠閒逛 Radio Kaikan（收音機會館）與周邊商店挖寶。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day3-content" class="day-section hidden space-y-5">
+                <div class="bg-gradient-to-r from-sky-500 to-indigo-500 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 3：史努比博物館 ➔ 池袋 3000 台扭蛋</h3>
+                    <p class="text-xs opacity-90 mt-1">朝聖超可愛 Snoopy，轉到手軟的池袋夜色</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-sky-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">10:30 - 13:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-sky-50 text-sky-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-dog mr-1 text-sky-500"></i>Snoopy 聖地</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">史努比博物館 Snoopy Museum</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>★ 需提早預購門票</strong>。走進史努比的世界，與巨型公仔合照，並在 PEANUTS Cafe 享用超萌午餐。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Snoopy+Museum+Tokyo" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-indigo-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">14:30 - 20:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-store mr-1 text-indigo-500"></i>娛樂採購總匯</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">池袋太陽城 (Sunshine City)</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【3000台扭蛋百貨】</strong>：世界規模最大扭蛋聖地，轉到手軟！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>【迪士尼與寶可夢】</strong>：直接在太陽城內逛超大 Disney Store 旗艦店，不需要再特地跑新宿！</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sunshine+City+Ikebukuro" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-indigo-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">20:00 - 21:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-indigo-50 text-indigo-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bowl-food mr-1 text-indigo-500"></i>池袋深夜傳奇</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">晚餐：池袋超高人氣美食</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【選項A】麵創房 無敵家</strong>：池袋最傳奇的豚骨拉麵，炙燒厚切叉燒肉入口即化！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>【選項B】鍋ぞう (Nabezo)</strong>：精緻和牛壽喜燒 / 涮涮鍋吃到飽，日本野菜無限供應，極致滿足！</p>
+                            <div class="flex space-x-3 pt-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=麵創房+無敵家" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>無敵家拉麵</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=鍋ぞう+池袋東口店" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>和牛壽喜鍋</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day4-content" class="day-section hidden space-y-5">
+                <div class="bg-gradient-to-r from-teal-500 to-rose-500 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 4：姆明北歐森林 ➔ 澀谷落日高空與極味屋</h3>
+                    <p class="text-xs opacity-90 mt-1">走進嚕嚕米的世界，在最美的黃昏俯瞰澀谷</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-teal-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">10:00 - 14:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-teal-50 text-teal-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-leaf mr-1 text-teal-500"></i>北歐療癒</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">嚕嚕米樂園 Moomin Valley Park</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">漫步在埼玉飯能的童話湖畔森林，走訪經典藍色姆明屋、在湖畔悠閒吃午餐。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Moomin+Valley+Park" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">16:30 - 18:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-mountain-sun mr-1 text-rose-500"></i>百萬黃昏落日</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">SHIBUYA SKY 360 度展望台</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>★ 需提早於 9/3 23:00 搶購</strong>。卡準 16:30 最夢幻落日時分入場，看橘色晚霞漸變成繁華夜景。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=SHIBUYA+SKY" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-amber-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">18:30 - 19:15</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-star mr-1 text-amber-500"></i>澀谷美學甜點</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">Tamitu 質感草本蜂蜜下午茶</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">（或二選一 Sweet Check 舒芙蕾蛋包飯，視肚子餓的情況安排）。在極具美學的空間中享受蜂蜜調飲。</p>
+                            <div class="flex space-x-3 pt-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Tamitu+Shibuya" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>Tamitu 蜂蜜</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Sweet+Check+Shibuya" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>Sweet Check 蛋包飯</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-600 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">19:15 - 21:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-fire mr-1 text-rose-600"></i>必吃炙燒漢堡排</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">極味屋 澀谷 Parco 店</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">在個人鐵板上自由掌控熟度，品嚐極致滑嫩、香氣爆棚的伊萬里和牛漢堡排！</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=極味や+渋谷パルコ店" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day5-content" class="day-section hidden space-y-5">
+                <div class="bg-gradient-to-r from-red-500 to-rose-500 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 5：雙古社巡禮 ➔ 銀座烏龍麵與狂掃衣服</h3>
+                    <p class="text-xs opacity-90 mt-1">一早開社搶限定御守，下午銀座旗艦店買齊衣服</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-red-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">09:00 - 10:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-red-50 text-red-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-torii-gate mr-1 text-red-500"></i>開運勝守搶先第一站</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">妙義神社（駒込）</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>★ 務必一早 09:00 開社就去！</strong> 確保買到每日極限量的勝守、開運與事業御守。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=妙義神社+駒込" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-pink-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">10:30 - 12:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-pink-50 text-pink-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-gopuram mr-1 text-pink-500"></i>蕾絲編織手環</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">阿佐谷神明宮 參拜</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">挑選全日本知名度極高、外觀美翻社群的精緻蕾絲手工編織御守（神むすび）。</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=阿佐谷神明宮" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-orange-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">12:45 - 14:15</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bowl-food mr-1 text-orange-500"></i>極致滑順麵條</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">銀座 佐藤養助</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">享用名聞全日的秋田名物稻庭烏龍麵。推薦「二味冷麵」，一邊沾清醬油，一邊沾濃郁胡麻，彈牙清爽！</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=銀座+佐藤養助" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-blue-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">14:15 - 18:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-bag-shopping mr-1 text-blue-500"></i>銀座四大巨頭狂掃</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">銀座大採購（今晚回飯店打包）</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2">全日本頂級旗艦店一次買齊衣服與文具！</p>
+                            <ul class="text-xs text-slate-500 space-y-1 list-disc list-inside">
+                                <li><strong>伊東屋 Itoya 本店</strong>：文具控聖地 12 層大樓</li>
+                                <li><strong>無印良品 銀座旗艦店</strong>：全球最大店鋪</li>
+                                <li><strong>UNIQLO 銀座旗艦店</strong>：整整 12 層大樓</li>
+                                <li><strong>大創 (DAISO)</strong>：尋寶好用生活雜貨</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-orange-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">18:30 - 21:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-orange-50 text-orange-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-glass-cheers mr-1 text-orange-500"></i>時髦串燒之夜</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">六本木 串燒肉男 MEAT MAN</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>★ 建議提前一個月線上預約</strong>。極具人氣的串燒居酒屋，必點招牌生肉、蔬菜肉捲與特製牛排，享受最時髦的微醺之夜！</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Meat+Man+Roppongi" target="_blank" class="inline-flex items-center text-[10px] text-rose-500 font-bold hover:underline pt-1"><i class="fa-solid fa-location-dot mr-1"></i>Google Maps 導航</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="day6-content" class="day-section hidden space-y-5">
+                <div class="bg-gradient-to-r from-slate-600 to-slate-800 p-4 rounded-3xl text-white shadow-sm">
+                    <span class="text-[9px] bg-white/20 uppercase tracking-widest px-2 py-0.5 rounded-full font-bold">Today's Highlight</span>
+                    <h3 class="font-extrabold text-base mt-2">Day 6：東京車站大掃貨 ➔ N'EX特快直達機場</h3>
+                    <p class="text-xs opacity-90 mt-1">東京車站直接搭機場特快 N'EX 安全返台</p>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200/60 ml-2 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-slate-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">10:30 - 11:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-suitcase-rolling mr-1 text-slate-500"></i>省時神技</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">辦理退房 ➔ 行季寄存東京車站</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">退房後，直接拉行李前往東京車站的置物櫃寄放。今天大買特買後，直接就地搭車去機場，完全不用再折返鶯谷飯店！</p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-pink-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">11:00 - 16:30</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-pink-50 text-pink-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-gift mr-1 text-pink-500"></i>車站甜點大滿貫</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">東京車站一番街 & 丸之內大樓</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【伴手禮】</strong>：大買 Press Butter Sand、NY 起司脆餅，塞進大摺疊手提袋。</p>
+                            <p class="text-xs text-slate-500 leading-relaxed mb-2"><strong>【DEPOT】</strong>：享用極具焦糖香、口感扎實的人氣布丁！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed"><strong>【美瑛放牧酪農場 Biei Farm】</strong>：(丸之內大樓 B1) 享用現烘鬆餅與濃郁霜淇淋，採購限定鐵盒餅乾。</p>
+                            <div class="flex space-x-3 pt-2">
+                                <a href="https://www.google.com/maps/search/?api=1&query=DEPOT+東京駅" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>DEPOT 布丁</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=BUTTER+美瑛放牧酪農場+丸ビル" target="_blank" class="text-[10px] text-rose-500 font-bold hover:underline"><i class="fa-solid fa-location-dot mr-0.5"></i>美瑛放牧酪農場</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-1 bg-white border-2 border-rose-500 w-4 h-4 rounded-full flex items-center justify-center"></span>
+                        <span class="text-[10px] font-bold text-slate-400 block tracking-wider">17:00 - 18:00</span>
+                        <div class="bg-white p-4 rounded-2xl border border-slate-100/80 shadow-sm mt-1.5 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs bg-rose-50 text-rose-700 px-2.5 py-0.5 rounded-full font-bold"><i class="fa-solid fa-plane-departure mr-1 text-rose-500"></i>直接直達機場</span>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">東京車站 ➔ (JR N'EX) ➔ 成田機場</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed font-bold text-rose-600">★ 把握最後的東京，機場逛免稅！</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">直接在東京車站地下 5 樓月台，搭乘 **JR 成田特快 N'EX**，只要 53 分鐘一車直達成田機場第二航廈（預購 17:00 左右車次，最為保險舒適）。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="hotel" class="page-content space-y-4">
+            <h2 class="text-sm font-bold text-slate-400 tracking-wider uppercase">🏨 飯店機能與資訊</h2>
+            <div class="bg-white p-5 rounded-3xl border border-slate-100/80 shadow-sm space-y-5">
+                <div class="border-b border-slate-100 pb-3 flex justify-between items-start">
+                    <div>
+                        <h3 class="text-base font-extrabold text-slate-800">LANDABOUT TOKYO</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">東京都台東区根岸3-4-5</p>
+                    </div>
+                    <span class="bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-100">已預訂</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <span class="text-[10px] text-slate-400 font-bold block uppercase">Check In</span>
+                        <span class="font-semibold text-slate-700 mt-1 block">10/01 (四) 17:00 後</span>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-slate-400 font-bold block uppercase">Check Out</span>
+                        <span class="font-semibold text-slate-700 mt-1 block">10/06 (二) 11:00 前</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-3.5 rounded-2xl text-xs space-y-1 text-slate-600">
+                    <p><strong>房型：</strong>Compact雙人房 (1間/2人)</p>
+                    <p><strong>確認號：</strong>1747734191</p>
+                </div>
+                <div class="border-t border-slate-100 pt-4 space-y-2">
+                    <h4 class="font-extrabold text-slate-700 text-xs">🏪 飯店周邊黃金補給機能：</h4>
+                    <ul class="text-xs text-slate-500 list-disc list-inside space-y-1">
+                        <li><strong>Life 鶯谷站前店大超市</strong> (步2分)：買爆日本當季極甜麝香葡萄與宵夜的絕佳首選。</li>
+                        <li><strong>全家 FamilyMart</strong> (轉角1分)：隔天早餐麵包與咖啡超方便。</li>
+                        <li><strong>7-11 鶯谷站前店</strong> (路口2分)：買生巧克力冰。</li>
+                    </ul>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=LANDABOUT+TOKYO" target="_blank" class="block text-center bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 rounded-2xl shadow-sm transition"><i class="fa-solid fa-map-location-dot mr-2"></i>導航前往飯店</a>
+            </div>
+        </div>
+
+        <div id="checklist" class="page-content space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-sm font-bold text-slate-400 tracking-wider uppercase">🎒 行前準備與行李</h2>
+                <button onclick="resetChecklist()" class="text-xs text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-rotate-right mr-1"></i>重設</button>
+            </div>
+            
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm sticky top-[69px] z-30">
+                <div class="flex justify-between text-xs font-bold mb-2">
+                    <span class="text-slate-500">行李箱與票券完成度</span>
+                    <span id="progress-text" class="text-rose-500 font-extrabold">0%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+                    <div id="progress-bar" class="bg-gradient-to-r from-orange-500 to-rose-500 h-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-rose-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-calendar-check mr-1.5"></i>重要訂票與行前採購</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-bottles" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-bottles">
+                            <span class="font-bold block text-slate-800">採購盥洗用品分裝罐</span>
+                            <span class="text-[10px] text-slate-400">分裝卸妝、洗面乳、洗護髮品</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-swab" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-swab">
+                            <span class="font-bold block text-slate-800">準備棉花棒</span>
+                            <span class="text-[10px] text-slate-400">裝成旅行小袋方便攜帶</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-visitjapan" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-visitjapan">
+                            <span class="font-bold block text-slate-800">Visit Japan Web 註冊填寫</span>
+                            <span class="text-[10px] text-slate-400">登機前上網填妥，把入境海關 QR Code 截圖存手機相簿</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-imperial-palace" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-imperial-palace">
+                            <span class="font-bold block text-slate-800">【9/1 04:00 搶】預約皇居內廷導覽 (非必選)</span>
+                            <span class="text-[10px] text-slate-400">如果想進去皇居宮殿內廷，可在宮內廳官網提早預約 10/02 13:30 場次</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-snoopy-ticket" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-snoopy-ticket">
+                            <span class="font-bold block text-slate-800">預訂「史努比博物館」門票</span>
+                            <span class="text-[10px] text-slate-400">提早於 Klook 或官網預約 D3 10:30 入場</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-shibuyasky" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-shibuyasky">
+                            <span class="font-bold block text-slate-800">【9/3 23:00開搶】SHIBUYA SKY 門票</span>
+                            <span class="text-[10px] text-slate-400">提早 30 天晚上 23:00 (台灣時間) 搶 D4 16:30-17:00 場次</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-laview" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-laview">
+                            <span class="font-bold block text-slate-800">【9/3 09:00開搶】西武鐵道 Laview 特急券</span>
+                            <span class="text-[10px] text-slate-400">提早 1 個月搶預訂 D4 往返飯能的觀景座位</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-meatman" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-meatman">
+                            <span class="font-bold block text-slate-800">【9/5 前後】訂位：六本木 串燒肉男</span>
+                            <span class="text-[10px] text-slate-400">極受歡迎，提早 1 個月線上完成 10/05 18:30 訂位</span>
+                        </label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-nabezo" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-nabezo">
+                            <span class="font-bold block text-slate-800">線上預約：池袋 鍋ぞう (Nabezo) 壽喜燒</span>
+                            <span class="text-[10px] text-slate-400">如果 D3 晚餐決定吃精緻和牛壽喜燒，建議提早 2~3 週在官網線上完成 10/03 20:00 訂位</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-orange-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-address-card mr-1.5"></i>重要文件與金流</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-passport" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-orange-500" onchange="updateProgress()">
+                        <label for="item-passport" class="flex-1 font-bold text-slate-800">實體護照 (效期確認 6 個月以上)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-cash" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-orange-500" onchange="updateProgress()">
+                        <label for="item-cash" class="flex-1 font-bold text-slate-800">日幣現鈔 (備用 ¥2 萬 ~ ¥3 萬/人即可)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-cards" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-orange-500" onchange="updateProgress()">
+                        <label for="item-cards" class="flex-1 font-bold text-slate-800">實體信用卡 (刷卡回饋登錄 + 綁定 Apple Pay)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-esim" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-orange-500" onchange="updateProgress()">
+                        <label for="item-esim" class="flex-1 font-bold text-slate-800">雙人eSIM 安裝設定完成</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-suica" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-orange-500" onchange="updateProgress()">
+                        <label for="item-suica" class="flex-1 font-bold text-slate-800">iPhone 錢包 Suica 卡綁定且加值好</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-amber-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-plug mr-1.5"></i>3C 與電器設備</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-powerbank" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-amber-500" onchange="updateProgress()">
+                        <label for="item-powerbank" class="flex-1 font-bold text-slate-800">行動電源 (隨身攜帶，不可托運)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-cable" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-amber-500" onchange="updateProgress()">
+                        <label for="item-cable" class="flex-1 font-bold text-slate-800">手機充電線</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-adapter" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-amber-500" onchange="updateProgress()">
+                        <label for="item-adapter" class="flex-1 font-bold text-slate-800">充電頭</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-emerald-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-shirt mr-1.5"></i>個人衣物</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-shoes" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-emerald-500" onchange="updateProgress()">
+                        <label for="item-shoes" class="flex-1 font-bold text-slate-800">超好走的運動鞋 (每天1.5萬步起跳)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-coat" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-emerald-500" onchange="updateProgress()">
+                        <label for="item-coat" class="flex-1 font-bold text-slate-800">防風外套 (10月初秋溫差大，方便穿脫)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-socks" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-emerald-500" onchange="updateProgress()">
+                        <label for="item-socks" class="flex-1 font-bold text-slate-800">足量襪子</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-underwear" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-emerald-500" onchange="updateProgress()">
+                        <label for="item-underwear" class="flex-1 font-bold text-slate-800">免洗內褲 (穿完即丟，為行李箱騰出空間)</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-violet-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-sparkles mr-1.5"></i>美妝、盥洗與保養</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-makeup" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-violet-500" onchange="updateProgress()">
+                        <label for="item-makeup" class="flex-1 font-bold text-slate-800">化妝包 (底妝、遮瑕、彩妝等)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-skincare" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-violet-500" onchange="updateProgress()">
+                        <label for="item-skincare" class="flex-1 font-bold text-slate-800">高保濕保養品 (10月東京非常乾燥)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-perfume" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-violet-500" onchange="updateProgress()">
+                        <label for="item-perfume" class="flex-1 font-bold text-slate-800">香水</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-toiletries" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-violet-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-toiletries">
+                            <span class="font-bold block text-slate-800">完整盥洗用品組</span>
+                            <span class="text-[10px] text-slate-400">卸妝、洗面乳、洗髮潤髮、護髮 (放入分裝瓶)</span>
+                        </label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-toothbrush" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-violet-500" onchange="updateProgress()">
+                        <label for="item-toothbrush" class="flex-1 font-bold text-slate-800">牙刷牙膏</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-towel" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-violet-500" onchange="updateProgress()">
+                        <label for="item-towel" class="flex-1 font-bold text-slate-800">免洗毛巾</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-4 rounded-3xl border border-slate-100/80 shadow-sm space-y-3">
+                <h3 class="font-extrabold text-xs text-rose-500 border-b border-slate-100 pb-2.5 uppercase tracking-wider"><i class="fa-solid fa-kit-medical mr-1.5"></i>常備醫藥與雜貨</h3>
+                <ul class="space-y-3 text-xs text-slate-600">
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-umbrella" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-rose-500" onchange="updateProgress()">
+                        <label for="item-umbrella" class="flex-1 font-bold text-slate-800">摺疊雨傘 (阻擋東京突發秋雨)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-shoppingbag" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-rose-500" onchange="updateProgress()">
+                        <label for="item-shoppingbag" class="flex-1 font-bold text-slate-800">隨身購物袋</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-medicine" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-rose-500" onchange="updateProgress()">
+                        <label for="item-medicine" class="flex-1 font-bold text-slate-800">常備藥物 (感冒、止痛、腸胃藥)</label>
+                    </li>
+                    <li class="flex items-center">
+                        <input type="checkbox" id="item-yusoku" class="checklist-item mr-3 h-4 w-4 rounded-lg accent-rose-500" onchange="updateProgress()">
+                        <label for="item-yusoku" class="flex-1 font-bold text-slate-800">猩猩之握 (千萬不能忘!)</label>
+                    </li>
+                    <li class="flex items-start">
+                        <input type="checkbox" id="item-bags" class="checklist-item mt-0.5 mr-3 h-4 w-4 rounded-lg accent-rose-500 flex-shrink-0" onchange="updateProgress()">
+                        <label for="item-bags">
+                            <span class="font-bold block text-slate-800">大折疊行李提袋</span>
+                            <span class="text-[10px] text-slate-400">最後一天放在置物櫃前，用來裝東京車站滿滿的手信伴手禮</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-slate-100 shadow-lg py-2.5 z-50">
+        <div class="max-w-md mx-auto flex justify-around items-center">
+            <button onclick="switchTab('itinerary', this)" class="nav-item flex flex-col items-center text-rose-500">
+                <i class="fa-solid fa-calendar-days text-lg"></i>
+                <span class="text-[10px] mt-1 font-bold">每日行程</span>
+            </button>
+            <button onclick="switchTab('hotel', this)" class="nav-item flex flex-col items-center text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-hotel text-lg"></i>
+                <span class="text-[10px] mt-1 font-bold">住宿資訊</span>
+            </button>
+            <button onclick="switchTab('checklist', this)" class="nav-item flex flex-col items-center text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-clipboard-list text-lg"></i>
+                <span class="text-[10px] mt-1 font-bold">準備清單</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        function switchTab(tabId, element) {
+            document.querySelectorAll('.page-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('text-rose-500');
+                item.classList.add('text-slate-400');
+            });
+            element.classList.add('text-rose-500');
+            element.classList.remove('text-slate-400');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showDay(dayNum) {
+            document.querySelectorAll('.day-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById('day' + dayNum + '-content').classList.remove('hidden');
+
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-rose-500', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-500');
+            });
+            const activeBtn = document.getElementById('btn-day' + dayNum);
+            activeBtn.classList.remove('bg-white', 'text-slate-500');
+            activeBtn.classList.add('bg-rose-500', 'text-white');
+        }
+
+        function updateProgress() {
+            const items = document.querySelectorAll('.checklist-item');
+            let checkedCount = 0;
+            
+            items.forEach(item => {
+                localStorage.setItem(item.id, item.checked);
+                if (item.checked) {
+                    checkedCount++;
+                }
+            });
+
+            const percentage = Math.round((checkedCount / items.length) * 100);
+            
+            document.getElementById('progress-bar').style.width = percentage + '%';
+            document.getElementById('progress-text').innerText = percentage + '%';
+        }
+
+        function loadChecklistState() {
+            const items = document.querySelectorAll('.checklist-item');
+            items.forEach(item => {
+                const savedState = localStorage.getItem(item.id);
+                if (savedState === 'true') {
+                    item.checked = true;
+                } else {
+                    item.checked = false;
+                }
+            });
+            updateProgress();
+        }
+
+        function resetChecklist() {
+            if (confirm('確定要清除所有勾選進度嗎？')) {
+                const items = document.querySelectorAll('.checklist-item');
+                items.forEach(item => {
+                    item.checked = false;
+                    localStorage.removeItem(item.id);
+                });
+                updateProgress();
+            }
+        }
+
+        window.onload = function() {
+            loadChecklistState();
+        };
+    </script>
+</body>
+</html>
